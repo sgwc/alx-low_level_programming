@@ -11,14 +11,20 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i <= 99; i++)
 	{
-		for (j = i + 1; j <= 9; j++)
-		{	
+		for (j = i + 1; j <= 99; j++)
+		{
+			if (i <= 9 )
+				putchar(48 + 0);
+				
 			putchar(48 + i);
+			putchar(' ');
+			if (j <= 9)
+				putchar(48 + 0);
 			putchar(48 + j);
 
-			if (i == 8 && j == 9)
+			if (i == 98 && j == 99)
 				break;
 
 			putchar(',');
