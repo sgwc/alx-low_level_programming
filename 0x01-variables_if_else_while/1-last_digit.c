@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - prints random numbers with its sign
+ * main - prints random numbers and its last digit with its sign
  * Return: Always 0 (Success)
  */
 
@@ -18,7 +18,7 @@ int main(void)
 	if (lsd == 0)
 		printf("Last digit of %d is %d and is 0\n", n, lsd);
 	else if (lsd > 5)
-		printf("Last digit of %d is %d and is greater that 5\n", n, lsd);
+		printf("Last digit of %d is %d and is greater than 5\n", n, lsd);
 	else
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lsd);
 	return (0);
