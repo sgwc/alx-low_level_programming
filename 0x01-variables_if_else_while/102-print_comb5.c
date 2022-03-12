@@ -9,30 +9,40 @@
 
 int main(void)
 {
-	int i, j;
+	int c, d, e, f = 0;
 
-	for (i = 0; i <= 99; i++)
+	while (f < 10)
 	{
-		for (j = i + 1; j <= 99; j++)
+		e = 0;
+		while (e < 10)
 		{
-			if (i <= 9 )
-				putchar(48 + 0);
-				
-			putchar(48 + i);
-			putchar(' ');
-			if (j <= 9)
-				putchar(48 + 0);
-			putchar(48 + j);
-
-			if (i == 98 && j == 99)
-				break;
-
-			putchar(',');
-			putchar(' ');
+			d = 0;
+			while (d < 10)
+			{
+				c = 0;
+				while (c < 10)
+				{
+					if (!(f == c && e ==d))
+					{
+						putchar('0' + f);
+						putchar('0' + e);
+						putchar(' ');
+						putchar('0' + d);
+						putchar('0' + c);
+						if (!(f + e == 18 && c + d == 17 && d == 9))
+						{
+							putchar(',');
+							putchar(' ');
+						}
+					}
+					c++;
+				}
+				d++;
+			}
+			e++;
 		}
+		f++;
 	}
-
 	putchar('\n');
 	return (0);
-
 }
