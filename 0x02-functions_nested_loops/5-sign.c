@@ -3,7 +3,7 @@
 /**
  * print_sign - print sign of the given interger
  * @n : interger number
- * Return : 1 if n is greater than 0 and 0 if n is 0 and 
+ * Return : 1 if n is greater than 0 and 0 if n is 0 and
  */
 int print_sign(int n)
 {
@@ -22,5 +22,4 @@ int print_sign(int n)
 		_putchar('0');
 		return (0);
 	}
-	
 }
