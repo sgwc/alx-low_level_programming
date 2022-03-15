@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_sign - print sign of the given interger 
+ * print_sign - print sign of the given interger
  * @n : interger number
- * Return : 1 if n is greater than 0 and 0 if n is 0 and -1 and if n is less than zero
+ * Return : 1 if n is greater than 0 and 0 if n is 0 and 
  */
 int print_sign(int n)
 {
@@ -22,5 +22,5 @@ int print_sign(int n)
 		_putchar('0');
 		return (0);
 	}
-		
+	
 }
