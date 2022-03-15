@@ -2,7 +2,7 @@
 
 /**
  * print_alphabet_x10- print alphabets to stdout
- * Return: Always 0 
+ * Return: Always 0
  */
 void print_alphabet_x10(void)
 {
