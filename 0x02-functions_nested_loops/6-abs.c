@@ -2,7 +2,7 @@
 /**
  * _abs - determine the absolute value of n
  *@n : char argument
- * Return - 1 success
+ * Return: 0 success
  */
 int _abs(int n)
 {
