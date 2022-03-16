@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_times_table - prints time table of 9
  *@n : interger number between 0 and 15
@@ -33,7 +34,7 @@ void print_times_table(int n)
 						_putchar(' ');
 						_putchar(p + '0');
 					}
-					else if( p >=10 && p < 100)
+					else if (p >= 10 && p < 100)
 					{
 						_putchar(',');
 						_putchar(' ');
@@ -43,10 +44,9 @@ void print_times_table(int n)
 					}
 					else
 					{
-						_putchar(',');
-						_putchar(' ');
+						printf(", ");
 						_putchar((p / 100) + '0');
-						_putchar(((p / 10)% 10) + '0');
+						_putchar(((p / 10) % 10) + '0');
 						_putchar((p % 10) + '0');
 					}
 				}
