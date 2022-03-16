@@ -1,21 +1,20 @@
 #include <stdio.h>
 /**
- * main - s
- * Return : 
+ * main - check for multiples of 3 and 5
+ *
+ * Return : 0 always
  */
 int main(void)
 {
-	unsigned long sum;
-	unsigned long m3;
-	unsigned long m5;
+	int sum;
 	int i;
+	sum = 0;
 
-	for (i = 1; i < 1024; i++)
+	for (i = 0; i < 1024; i++)
 	{
-		m3 = 3 * i;
-		m5 = 5 * i;
-		sum = m3 + m5;
+		if ((i % 3 == 0) || (i % 5 == 0))
+			sum = sum + i;
 	}
-	printf("%lu\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
