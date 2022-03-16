@@ -13,10 +13,6 @@ void print_times_table(int n)
 	{
 		return;
 	}
-	else if (n == 0)
-	{
-		_putchar('0');
-	}
 	else
 	{
 		for (i = 0; i <= n; i++)
@@ -24,38 +20,31 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				p = i * j;
-				if (j == 0)
+				if (p > 0)
 				{
-					_putchar(p + '0');
-				}
-				else
-				{
-					if (p < 10)
+					if (p > 9 && p <= 99)
 					{
-						_putchar(',');
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(p + '0');
+						printf(",  %d", p);
 					}
-					else if (p >= 10 && p < 100)
+					else if(p > 99)
 					{
-						_putchar(',');
-						_putchar(' ');
-						_putchar(' ');
-						_putchar((p / 10) + '0');
-						_putchar((p % 10) + '0');
+						printf(", %d", p);
 					}
 					else
 					{
-						printf(", ");
-						_putchar((p / 100) + '0');
-						_putchar(((p / 10) % 10) + '0');
-						_putchar((p % 10) + '0');
+						printf(",   %d", p);
+					}
+				}
+				else
+				{
+					printf("%d", p);
+					if (j != n && i == 0)
+					{
+						printf(",   ");
 					}
 				}
 			}
-			_putchar('\n');
+			printf("\n");
 		}
 	}
 }
