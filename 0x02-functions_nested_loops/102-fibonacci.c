@@ -12,9 +12,9 @@ int main(void)
 	int i;
 	unsigned long sum;
 	
-	unsigned long fb[50];
+	unsigned long fb[51];
 
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 51; i++)
 	{
 		if (i < 2)
 		{
@@ -24,10 +24,10 @@ int main(void)
 		{
 			fb[i] = fb[i - 1] + fb[i - 2];
 		}
+		printf("%lu, ",fb[i]);
 	}
 
-	sum = fb[49];
-	
-	printf("%lu\n", sum);
+	printf("\n");
+
 	return (0);
 }
