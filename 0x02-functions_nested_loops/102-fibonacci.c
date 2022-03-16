@@ -10,8 +10,6 @@
 int main(void)
 {
 	int i;
-	unsigned long sum;
-	
 	unsigned long fb[51];
 
 	for (i = 0; i < 51; i++)
@@ -24,7 +22,11 @@ int main(void)
 		{
 			fb[i] = fb[i - 1] + fb[i - 2];
 		}
-		printf("%lu, ",fb[i]);
+		
+		if (i >= 1 && i < 50)
+			printf("%lu, ", fb[i]);
+		else if (i >= 50)
+			printf("%lu", fb[i]);
 	}
 
 	printf("\n");
