@@ -3,7 +3,6 @@
 /**
  * main - main entry point
  *
- * fibonacci : prints the first 50 fibonacci serious
  * Return : return 0 (success)
  */
 
@@ -18,11 +17,10 @@ int main(void)
 		{
 			fb[i] = 1;
 		}
-		else 
+		else
 		{
 			fb[i] = fb[i - 1] + fb[i - 2];
 		}
-		
 		if (i >= 1 && i < 50)
 			printf("%lu, ", fb[i]);
 		else if (i >= 50)
