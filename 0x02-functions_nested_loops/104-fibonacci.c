@@ -2,14 +2,14 @@
 
 /**
  * main - main entry point
- * Retun: 0 on success
+ * Return: 0 on success
  */
 int main(void)
 {
 	int i;
 	unsigned long sum, pv, cv;
 
-	for(i = 0; i < 98; i++)
+	for(i = 0; i < 99; i++)
 	{
 		if (i == 0)
 		{	
@@ -20,7 +20,7 @@ int main(void)
 			cv = sum;
 			printf("%lu, ", sum);
 		}
-		else if ( i > 0 && i < 97)
+		else if ( i > 0 && i < 98)
 		{
 			sum = pv + cv;
 			pv = cv;
