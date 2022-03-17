@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
  * main - check for multiples of 3 and 5
- *
- * Return : 0 always
+ * Return : 0 on sucess
  */
 int main(void)
 {
