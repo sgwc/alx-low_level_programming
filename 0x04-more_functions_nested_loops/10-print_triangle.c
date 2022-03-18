@@ -7,10 +7,10 @@
 void print_triangle(int size)
 {
 	int j, k, p;
-	//for (i = 0; i < size; i++)
-	//{
+	if (size != 0)
+	{	
 		for (j = 0; j < size; j++)
-		{
+		{	
 			if (j != (size - 1))
 			{
 				for (k = size - 1; k > j; k--)
@@ -18,9 +18,10 @@ void print_triangle(int size)
 			}
 				for (p = 0; p <= j; p++)
 					_putchar('#');
-				_putchar('\n');
+			_putchar('\n');
 
 		}
-	//}
-	_putchar('\n');
+	}
+	else
+		_putchar('\n');
 }
