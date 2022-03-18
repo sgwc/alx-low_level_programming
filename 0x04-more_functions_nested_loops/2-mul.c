@@ -4,7 +4,7 @@
  * mul - return multiple of two arguments
  * @a: first operand
  * @b: second
- * Return : product
+ * Return : 0 on success
  */
 
 int mul(int a, int b)
