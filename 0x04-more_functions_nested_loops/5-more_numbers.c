@@ -1,22 +1,24 @@
 #include "main.h"
 
 /**
- * more_numbers - list all digits form 0 - 9, except 2 and 4
- * 
- * Return: Always 0
+ * more_numbers - print from 0 to 14
+ * Return: void
  */
 
 void more_numbers(void)
 {
-	int i, j;
-	for (j = 0; j < 10; j++)
+	int i;
+	char n;
+
+	for (i = 0; i < 10; i++)
 	{
-		for (i = 0; i < 15; i++)
+		for (n = 0; n <= 14; n++)
 		{
-			if(i <= 9)
-				_putchar(i);
-			else
-				_putchar('1' + i % 10);
+			if (n > 9)
+			{
+				_putchar((n / 10) + '0');
+			}
+			_putchar((n % 10) + '0');
 		}
 		_putchar('\n');
 	}
