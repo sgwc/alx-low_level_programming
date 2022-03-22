@@ -6,16 +6,23 @@
  * @s: string variable
  * Return: Always 0.
  */
+
 void print_rev(char *s)
 {
+	int i;
 	int len;
 
-	len = _strlen(s);
+	while ( s[i] != '\0')
+	{
+		i++;
+	}
+	len = i;
+
 	while (len >= 0)
 	{
-		printf("%c", s[len]);
+		_putchar('0' + s[len]);
 		len--;
 
 	}
-	printf("\n");
+	_putchar('\n');
 }
