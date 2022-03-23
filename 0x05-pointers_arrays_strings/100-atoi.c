@@ -12,7 +12,7 @@ int _atoi(char *s)
 {
 	int j;
 	int i = first_digit_index(s);
-	
+
 	unsigned int num = 0;
 
 	int count = 0;
@@ -71,7 +71,7 @@ int last_digit_index(char *s)
 	i = first_digit_index(s);
 	index = i;
 
-	for (i = i + 1; s[i] != '\0';i++)
+	for (i = i + 1; s[i] != '\0'; i++)
 	{
 		if (s[i] < 48 || s[i] > 57)
 		{
