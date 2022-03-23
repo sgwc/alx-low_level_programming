@@ -16,17 +16,17 @@ int _atoi(char *s)
 	unsigned int num = 0;
 
 	int count = 0;
-	
+
 	int sign = 1;
 
-	for (;i < last_digit_index(s); i++)
-	{	
+	for (; i < last_digit_index(s); i++)
+	{
 		if (s[i] >= 48 && s[i] <= 57)
 		{
 			num = num * 10 + (s[i] - '0');
 		}
 	}
-	for (j = 0;j < first_digit_index(s); j++)
+	for (j = 0; j < first_digit_index(s); j++)
 	{
 		if (s[j] == 45)
 			count++;
@@ -51,7 +51,7 @@ int first_digit_index(char *s)
 	for (; s[i] != '\0'; i++)
 	{
 		if (s[i] >= 48 && s[i] <= 57)
-		{	
+		{
 			index = i;
 			break;
 		}
@@ -67,13 +67,13 @@ int last_digit_index(char *s)
 {
 	int index;
 	int i;
-	
+
 	i = first_digit_index(s);
 	index = i;
 
 	for (i = i + 1; s[i] != '\0';i++)
 	{
-		if (s[i] < 48 || s[i] > 57 )
+		if (s[i] < 48 || s[i] > 57)
 		{
 			index = i;
 			break;
