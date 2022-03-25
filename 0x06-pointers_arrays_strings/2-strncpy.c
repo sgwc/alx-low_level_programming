@@ -1,11 +1,10 @@
 #include "main.h"
-
 /**
- * _strncpy - does string copy
- * @dest: destination string
- * @src: source string
- * @n: numbers of characers to be concatinated on dest
- * Return: pointer to dest
+ *_strncpy - copies a string
+ *@dest: A pointer to a character that will be changed
+ *@src: A pointer to a character that will be changed
+ *@n: value
+ *Return: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
