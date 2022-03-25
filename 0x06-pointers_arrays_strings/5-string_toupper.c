@@ -2,7 +2,7 @@
 
 /**
  * string_toupper - converts all elements into upper.
- * @: array of char
+ * @a: array of char
  * Return: the converted string
  */
 char *string_toupper(char *a)
