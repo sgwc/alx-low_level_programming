@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _strncat - does string concatination
  * @dest: destination string
@@ -21,6 +20,5 @@ char *_strncat(char *dest, char *src, int n)
 		dest[len] = src[i];
 	}
 	dest[len] = '\0';
-	
 	return (dest);
 }
