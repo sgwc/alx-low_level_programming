@@ -4,13 +4,13 @@
  * @s1: first string operand
  * @s2: second string operand
  *
- * Return: int value if different and 0 if they are same.
+ * Return: diff
  */
 int _strcmp(char *s1, char *s2)
 {
 	int i, diff;
-	diff = 0;
 	
+	diff = 0;
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 		diff = s1[i] - s2[i];
