@@ -8,7 +8,7 @@
  * check_num - check - string there are digit
  * @str: array str
  *
- * Return: Always 0(Success)
+ * Return: Always 0(Success) , 1 (Failure)
  */
 
 int check_num(char *str)
@@ -26,9 +26,10 @@ int check_num(char *str)
 	}
 	return (1);
 }
+
 /**
- * main - prints the multiplication of two integrs
- * @argc:number of arguments
+ * main - adds interger arguments
+ * @argc: number of arguments
  * @argv: Arguments passed
  *
  * Return: Always 0 (Success)
