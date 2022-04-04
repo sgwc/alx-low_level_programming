@@ -25,11 +25,11 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
-	s = memset(s, c, size);
-	if (s == NULL)
+	if (s != NULL)
 	{
-		return (NULL);
+		s = memset(s, c, size);
+		return (s);
 	}
 	else
-		return (s);
+		return (NULL);
 }
