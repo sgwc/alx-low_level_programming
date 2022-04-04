@@ -17,16 +17,16 @@ char *_strdup(char *str)
 	int size;
 	char *s;
 	
-	size = strlen(str);
+	size = strlen(str) + 1;
 
 	if (size != 0)
 	{
-		s = malloc((size + 1) * sizeof(char));
+		s = malloc((size) * sizeof(char));
 	}
 	else
 	{
 		return (NULL);
 	}
-	s = strcpy(s,str);
+	s = strcpy(s, str);
 	return (s);
 }
