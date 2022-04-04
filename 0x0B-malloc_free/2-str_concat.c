@@ -1,0 +1,37 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * str_concat - concatinat s2 on to s1
+ * @s1: first string
+ * @s2: the stirng to be appended on to s1
+ *
+ * Return : newely allowcated memory
+ */
+char *str_concat(char *s1, char *s2)
+{
+	char *s;
+	unsigned int i, j, size;
+
+	size = strlen(s1) + strlen(s2) + 1;
+	s = malloc(size * sizeof(char));
+
+	if (s == 0)
+	{
+		return (NULL);
+	}
+
+	/*Concatenate arrays*/
+	for (i = 0; *(s1 + 1) != '\0'; i++)
+		*(s + i) = *(s1 + i);
+
+	for (j = 0; *(s2 + j) != '\0'; j++)
+	{
+		*(s + i) = *(s2 + j);
+		i++;
+	}
+
+	return (s);
+}
