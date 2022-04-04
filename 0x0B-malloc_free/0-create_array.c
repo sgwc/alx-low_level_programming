@@ -26,5 +26,10 @@ char *create_array(unsigned int size, char c)
 	}
 
 	s = memset(s, c, size);
-	return (s);
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+	else
+		return (s);
 }
