@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 /**
  * create_array - creates an array of chars
@@ -14,6 +16,11 @@ char *create_array(unsigned int size, char c)
 {
 	char *s;
 	s = malloc(size * sizeof(char));
-	s[0] = c;
+	if (s == NULL)
+	{
+		printf("failed to allocate memory\n");
+		return (NULL);
+	}
+	s = memset(s,c,size);
 	return (s);
 }
