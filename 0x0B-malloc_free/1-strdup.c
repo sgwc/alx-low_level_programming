@@ -29,6 +29,6 @@ char *_strdup(char *str)
 		s = strcpy(s, str);
 		return (s);
 	}
-	else 
+	else
 		return (NULL);
 }
