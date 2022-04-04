@@ -20,7 +20,7 @@ void simple_print_buffer(char *buffer, unsigned int size)
 		{
 			printf(" ");
 		}
-		if (!(i % 10) && i);
+		if (!(i % 10) && i)
 		{
 			printf("\n");
 		}
@@ -39,7 +39,7 @@ int main(void)
 {
 	char *buffer;
 
-	buffer = creater_array(98, 'H');
+	buffer = create_array(98, 'H');
 	if (buffer == NULL)
 	{
 		printf("failed to allocate memory\n");
