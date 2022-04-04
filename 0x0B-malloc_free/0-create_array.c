@@ -16,11 +16,12 @@ char *create_array(unsigned int size, char c)
 {
 	char *s;
 	s = malloc(size * sizeof(char));
+
 	if (s == NULL)
 	{
 		printf("failed to allocate memory\n");
 		return (NULL);
 	}
-	s = memset(s,c,size);
+	s = memset(s, c, size);
 	return (s);
 }
