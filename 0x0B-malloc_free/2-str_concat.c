@@ -16,7 +16,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, j, size;
 
 	size = strlen(s1) + strlen(s2) + 1;
-	s = malloc(size * sizeof(char));
+	s = (char *)malloc(size * sizeof(char));
 
 	if (s == 0)
 	{
@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	/*Concatenate arrays*/
-	for (i = 0; *(s1 + 1) != '\0'; i++)
+	for (i = 0; *(s1 + i) != '\0'; i++)
 		*(s + i) = *(s1 + i);
 
 	for (j = 0; *(s2 + j) != '\0'; j++)
@@ -32,6 +32,7 @@ char *str_concat(char *s1, char *s2)
 		*(s + i) = *(s2 + j);
 		i++;
 	}
+	*(s + i) = '\0';
 
 	return (s);
 }
