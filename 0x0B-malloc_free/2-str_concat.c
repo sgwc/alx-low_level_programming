@@ -15,7 +15,13 @@ char *str_concat(char *s1, char *s2)
 	char *s;
 	unsigned int i, j, size;
 
-	if (s1 == NULL)
+	if (s1 == NULL && s2 == NULL)
+	{
+		s1 = " ";
+		s2 = " ";
+		size = strlen(s1) + strlen(s2) + 1;
+	}
+	else if (s1 == NULL)
 	{
 		s1 = " ";
 		size = strlen(s1) + strlen(s2) + 1;
@@ -25,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = " ";
 		size = strlen(s1) + strlen(s2) + 1;
 	}
-	else if (s1 != NULL && s2 != NULL)
+	else 
 	{
 		size = strlen(s1) + strlen(s2) + 1;
 	}
