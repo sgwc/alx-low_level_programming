@@ -8,7 +8,7 @@
  * @s1: first string
  * @s2: the stirng to be appended on to s1
  *
- * Return : newely allowcated memory
+ * Return: newely allowcated memory
  */
 char *str_concat(char *s1, char *s2)
 {
