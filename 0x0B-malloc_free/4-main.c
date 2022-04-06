@@ -10,18 +10,19 @@
  *
  * Return: Nothing
  */
+
 void print_grid(int **grid, int width, int height)
 {
 	int w;
 	int h;
 
 	h = 0;
-	While (h < height)
+	while (h < height)
 	{
 		w = 0;
 		while (w < width)
 		{
-			printf("%d", grid[h][w]);
+			printf("%d ", grid[h][w]);
 			w++;
 		}
 		printf("\n");
@@ -38,15 +39,15 @@ int main(void)
 {
 	int **grid;
 
-	gird  = alloc_grid(6, 4);
-	if (gird == NULL)
+	grid = alloc_grid(6, 4);
+	if (grid == NULL)
 	{
 		return (1);
 	}
-	printf_grid(grid, 6, 4);
+	print_grid(grid, 6, 4);
 	printf("\n");
 	grid[0][3] = 98;
-	gird[3][4] = 402;
+	grid[3][4] = 402;
 	print_grid(grid, 6, 4);
 	return (0);
 }
