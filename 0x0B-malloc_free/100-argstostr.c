@@ -10,35 +10,38 @@
  *
  * Return: pointer
  */
-char *argstostr(int  ac, char **av)
+char *argstostr(int ac, char **av)
 {
-	char *s;
-	int i, count = 0;
+	char *str;
+	int count = 0, a = 0, b = 0, c = 0;
 
 	if (ac == 0 || av == NULL)
+		return (NULL);
+	while (a < ac)
+	{
+		b = 0;
+		while (av[a][b] != '\0')
+		{
+			count++;
+			b++;
+		}
+		a++;
+	}
+	count = count + ac + 1;
+	str = malloc(sizeof(char) * count);
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < ac; i++)
+	for (a = 0; a < ac; a++)
 	{
-		count++;
+		for (b = 0; av[a][b] != '\0'; b++)
+		{
+			str[c] = av[a][b];
+			c++;
+		}
+		str[c] = '\n';
+		c++;
 	}
-
-	count = count + 1;
-	s = malloc(sizeof(char) * count);
-
-	if (s == NULL)
-	{
-		return (NULL);
-	}
-	s = av[0];
-	/*s = strcat(s, "\n");*/
-
-	for (i = 1; i < ac; i++)
-	{
-		/*s = strcat(s, "\n");*/
-		s = strcat(s, av[i]);
-	}
-
-	return (s);
+	return (str);
 }
