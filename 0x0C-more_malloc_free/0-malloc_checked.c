@@ -7,6 +7,7 @@
  *
  * Return: pointer on succuss (98 if failed)
  */
+
 void *malloc_checked(unsigned int b)
 {
 	void *ptr;
@@ -17,6 +18,5 @@ void *malloc_checked(unsigned int b)
 	{
 		exit (98);
 	}
-	
 	return (ptr);
 }
