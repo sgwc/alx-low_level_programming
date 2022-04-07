@@ -1,60 +1,43 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-
+#include "main.h"
 /**
- * string_nconcat - concatinat s2 on to s1
- * @s1: first string
- * @s2: the stirng to be appended on to s1
- * @n: number of character of s2 to be copied.
- *
- * Return: newely allowcated memory
+ * string_nconcat - a function that concatenates two strings
+ * @s1 : string one
+ * @s2 : string two
+ * n : size of s2 to be printed
+ * Return:character
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *s;
-	unsigned int i, j, size;
+	int i = 0;
+	int j;
+	int k;
+	int length;
+	char *p;
 
-	if (s1 == NULL && s2 == NULL)
+	j = 0;
+	k = 0;
+	while (s1[i] != '\0')
 	{
-		s1 = "";
-		s2 = "";
-	}
-	else if (s1 == NULL)
-	{
-		s1 = "";
-	}
-	else if (s2 == NULL)
-	{
-		s2 = "";
-	}
-	if (n > 0 && n < strlen(s2))
-	{
-		size = strlen(s1) + n + 1;
-	}
-	else
-	{
-		size = strlen(s1) + strlen(s2) + 1;
-	}
-
-	s = (char *)malloc(size * sizeof(char));
-
-	if (s == 0)
-	{
-		return (NULL);
-	}
-
-	/*Concatenate arrays*/
-	for (i = 0; *(s1 + i) != '\0'; i++)
-		*(s + i) = *(s1 + i);
-
-	for (j = 0; j <= n; j++)
-	{
-		*(s + i) = *(s2 + j);
+		length++;
 		i++;
 	}
-	*(s + i) = '\0';
+	p = malloc(length + n + 1);
 
-	return (s);
+	if (p == 0)
+		return (NULL);
+	while (s1[j] != '\0')
+	{
+		p[j] = s1[j];
+		j++;
+	}
+	while (n > 0)
+	{
+		p[j] = s2[k];
+		n--;
+		k++;
+		j++;
+	}
+	p[j + 1] = '\0';
+	return (p);
 }
