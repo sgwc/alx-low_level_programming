@@ -1,22 +1,16 @@
-#include "main.h"
 #include <stdlib.h>
 
 /**
- * malloc_checked - checks the newly created mem block
- * @b: size of the mem
- *
- * Return: pointer on succuss (98 if failed)
+ * *malloc_checked - allocates memory using malloc and exit if failed
+ * @b: int
+ * Return: pointer to the array initialized or NULL
  */
 
 void *malloc_checked(unsigned int b)
 {
-	int *ptr;
-	
-	ptr = (void *)malloc(b);
+int *m = malloc(b);
+if (m == 0)
+	exit(98);
 
-	if (ptr == NULL)
-	{
-		exit (98);
-	}
-	return (ptr);
+return (m);
 }
