@@ -4,9 +4,10 @@
 #include <string.h>
 
 /**
- * str_concat - concatinat s2 on to s1
+ * string_nconcat - concatinat s2 on to s1
  * @s1: first string
  * @s2: the stirng to be appended on to s1
+ * @n: number of character of s2 to be copied.
  *
  * Return: newely allowcated memory
  */
