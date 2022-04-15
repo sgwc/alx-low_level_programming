@@ -4,13 +4,6 @@
 
 /**
  * print_int - prints int
-<<<<<<< HEAD
- * @list: arg from print_all
- */
-void print_int(va_list list)
-{
-	
-=======
  * @list: arguments from print_all
  */
 void print_int(va_list list)
@@ -89,5 +82,4 @@ while (format && format[i])
 
 printf("\n");
 va_end(list);
->>>>>>> 7750439e12aaf882e456362becae16d2cd315570
 }
