@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdarg.h>
 
 /**
  * print_numbers - prints arguments
@@ -15,7 +14,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list list;
 	unsigned int i;
-	
+
 	va_start(list, n);
 
 	for (i = 0; i < n; i++)
