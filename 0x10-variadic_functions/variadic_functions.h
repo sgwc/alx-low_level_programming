@@ -21,7 +21,7 @@ void print_str(va_list list);
 typedef struct printTypeStruct
 {
 	char *type;
-	void(*printer)(va_list);
+	void (*printer)(va_list);
 } printTypeStruct;
 
 
