@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
+ * get_op_func - finds the right functions
+ * @s: operator
  *
- *
- *
- *
+ * Return: Always 0.
  */
 int (*get_op_func(char *s))(int, int)
 {
