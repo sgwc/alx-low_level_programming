@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	int count;
-	int resut;
+	int result;
 
 	va_list list;
 	if (!format)
@@ -22,11 +22,11 @@ int _printf(const char *format, ...)
 	{
 		if (format[count] == '%')
 		{
-			result += main_sorter(list, format[count + 1]);
+			result += formats(list, format[count + 1]);
 			count++;
 		}
 		else
-			result += write(1, format[count], 1);
+			result += _putchar(format[count]);
 	}
 	va_end(list);
 	return (result);
