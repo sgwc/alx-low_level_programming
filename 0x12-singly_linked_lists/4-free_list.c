@@ -4,6 +4,7 @@
 /**
  * free_list - frees a list
  * @head: head of the linked list.
+ *
  * Return: no return.
  */
 
