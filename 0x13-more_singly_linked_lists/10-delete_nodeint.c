@@ -7,7 +7,7 @@
  * @head: head of the list
  * @indeX: index to insert at
  *
- * Return: the new node
+ * Return: 1 on success -1 if failed
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
@@ -27,7 +27,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		return (-1);
 	}
-	
+
 	next = prev->next;
 
 	if (index != 0)
