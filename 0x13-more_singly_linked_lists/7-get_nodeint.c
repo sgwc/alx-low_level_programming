@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * get_node_at_index - get node
+ * get_nodeint_at_index - get node
  * @head: head of the list
  * @index: indext of the node
  *
