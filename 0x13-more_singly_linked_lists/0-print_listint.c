@@ -13,7 +13,6 @@ size_t print_listint(const listint_t *h)
 	unsigned int nodes;
 
 	nodes = 0;
-
 	if (h == NULL)
 		return (0);
 	while (h != NULL)
