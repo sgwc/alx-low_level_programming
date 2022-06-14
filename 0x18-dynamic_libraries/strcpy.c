@@ -1,21 +1,18 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
- * _strlen - returns the length of string
- * @s: string input
- *
- * Return: length
- */
-
-int _strlen(char *s)
+* _strcpy - Copy paste string
+*@dest: destination
+*@src: source
+*Return: dest
+*/
+char *_strcpy(char *dest, char *src)
 {
-	int i, len = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		len++;
-	}
-	return (len);
+int inc = 0;
+while (*(src + inc) != '\0')
+{
+*(dest + inc) = *(src + inc);
+inc++;
+}
+*(dest + inc) = '\0';
+return (dest);
 }
