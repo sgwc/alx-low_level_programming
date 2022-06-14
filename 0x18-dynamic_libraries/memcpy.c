@@ -1,21 +1,18 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
- * _strlen - returns the length of string
- * @s: string input
- *
- * Return: length
- */
-
-int _strlen(char *s)
+*_memcpy - The _memcpy() function copies n bytes
+* from memory area src to memory area dest
+*@dest:area where bytes are copied to
+*@src:area where bytes are copied from
+*@n:number of bytes to copy
+*Return: returns a pointer to n
+*/
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int i, len = 0;
+	unsigned int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		len++;
-	}
-	return (len);
+	for (; i < n; i++)
+		dest[i] = src[i];
+
+	return (dest);
 }
