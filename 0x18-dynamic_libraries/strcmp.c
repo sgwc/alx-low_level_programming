@@ -1,21 +1,41 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * _strlen - returns the length of string
- * @s: string input
- *
- * Return: length
- */
+*  _strcmp - Function which compare two strings and
+*@s1: first string
+*@s2:second string
+*Return:
+*		returns zero if s1 == s2
+*		returns negative number if s1 < s2
+*		returns positive number if s1 > s2
+*/
 
-int _strlen(char *s)
+int _strcmp(char *s1, char *s2)
 {
-	int i, len = 0;
+	int i = 0, diff = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (1)
 	{
-		len++;
+		if (s1[i] == '\0' && s2[i] == '\0')
+			break;
+		else if (s1[i] == '\0')
+		{
+			diff = s2[i];
+			break;
+		}
+		else if (s2[i] == '\0')
+		{
+			diff = s1[i];
+			break;
+		}
+		else if (s1[i] != s2[i])
+		{
+			diff = s1[i] - s2[i];
+			break;
+		}
+		else
+			i++;
+
 	}
-	return (len);
+	return (diff);
 }
