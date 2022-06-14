@@ -1,21 +1,20 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
- * _strlen - returns the length of string
- * @s: string input
- *
- * Return: length
- */
+*_memset - The _memset() function fills
+* the first n bytes of the memory area
+* pointed to by s with the constant byte b
+*@s:target
+*@b: constant byte
+*@n:number of byte
+*Return: returns new value of target
+*/
 
-int _strlen(char *s)
+char *_memset(char *s, char b, unsigned int n)
 {
-	int i, len = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
+	while (n)
 	{
-		len++;
+		s[n - 1] = b;
+		n--;
 	}
-	return (len);
+	return (s);
 }
