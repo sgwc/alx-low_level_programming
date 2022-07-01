@@ -10,12 +10,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_table_t *dict;
 
 	dict = malloc(sizeof(hash_table_t));
+
 	if (dict == NULL)
 		return (NULL);
 
 	dict->size = size;
-
 	dict->array = malloc(sizeof(hash_node_t *) * size);
+
 	if (dict->array == NULL)
 	{
 		return(NULL);
